@@ -1,63 +1,73 @@
+/* UserInterface.cs
+ * Author: Rod Howell
+ */
 namespace Ksu.Cis300.TextEditor
 {
     /// <summary>
-    /// User interface class
+    /// A GUI for a simple text editor.
     /// </summary>
     public partial class UserInterface : Form
     {
         /// <summary>
-        /// initalizes user interface
+        /// Constructs the GUI.
         /// </summary>
         public UserInterface()
         {
             InitializeComponent();
         }
-        /// <summary>
-        /// mistake
-        /// </summary>
-        /// <param name="sender">The object signaling the event</param>
-        /// <param name="e">Information about the event<param>
-        private void SaveFileDialogFileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
 
-        }
         /// <summary>
-        /// mistake
+        /// Handles a Click event on the "Open . . ." menu item.
         /// </summary>
-        /// <param name="sender">The object signaling the event</param>
-        /// <param name="e">Information about the event</param>
-        private void File_Click(object sender, EventArgs e)
+        /// <param name="sender">The object signaling the event.</param>
+        /// <param name="e">Information about the event.</param>
+        private void OpenClick(object sender, EventArgs e)
         {
-
-        }
-        /// <summary>
-        /// opens a file
-        /// </summary>
-        /// <param name="sender">The object signaling the event</param>
-        /// <param name="e">Information about the event</param>
-        private void Open_Click(object sender, EventArgs e)
-        {
-            if (uxOpenFileDialog.ShowDialog() == DialogResult.OK)
+            if (uxOpenDialog.ShowDialog() == DialogResult.OK)
             {
-                String fileName = uxOpenFileDialog.FileName;
-                MessageBox.Show(fileName + " Can not be opened");
-            }
+                string fileName = uxOpenDialog.FileName;
 
-        }
-        /// <summary>
-        /// saves a file
-        /// </summary>
-        /// <param name="sender">The object signaling the event</param>
-        /// <param name="e">Information about the event</param>
-        private void SaveAs_Click(object sender, EventArgs e)
-        {
-            if (uxSaveFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                String fileName = uxSaveFileDialog.FileName;
-                MessageBox.Show(fileName + " Can not be saved");
+                try
+                {
+                    string contents = File.ReadAllText(fileName);
+                    uxEditBuffer.Text = contents;
+
+                }
+                catch(Exception ex)
+                {
+                    ErrorMessage(ex);
+                }
             }
         }
 
-        
+        /// <summary>
+        /// Handles a Click event on the "Save As . . ." menu item.
+        /// </summary>
+        /// <param name="sender">The object signaling the event.</param>
+        /// <param name="e">Information about the event.</param>
+        private void SaveAsClick(object sender, EventArgs e)
+        {
+            if (uxSaveDialog.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = uxSaveDialog.FileName;
+                string contents = uxEditBuffer.Text;
+                try
+                {
+                    File.WriteAllText(fileName, contents);
+                }
+                catch(Exception ex)
+                {
+                    ErrorMessage(ex);
+                }
+            }
+        }
+        /// <summary>
+        /// takes error from textbox and sends out message box with error 
+        /// </summary>
+        /// <param name="e"> Execption thrown by textbox</param>
+        private static void ErrorMessage(Exception e)
+        {
+            MessageBox.Show("The following error has occurred: " + e.ToString());
+        }
     }
 }

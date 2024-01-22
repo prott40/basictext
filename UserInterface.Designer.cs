@@ -28,24 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            uxMenuStrip = new MenuStrip();
+            uxMenuBar = new MenuStrip();
             uxFile = new ToolStripMenuItem();
             uxOpen = new ToolStripMenuItem();
             uxSaveAs = new ToolStripMenuItem();
-            uxTextBox = new TextBox();
-            uxOpenFileDialog = new OpenFileDialog();
-            uxSaveFileDialog = new SaveFileDialog();
-            uxMenuStrip.SuspendLayout();
+            uxEditBuffer = new TextBox();
+            uxOpenDialog = new OpenFileDialog();
+            uxSaveDialog = new SaveFileDialog();
+            uxMenuBar.SuspendLayout();
             SuspendLayout();
             // 
-            // uxMenuStrip
+            // uxMenuBar
             // 
-            uxMenuStrip.Items.AddRange(new ToolStripItem[] { uxFile });
-            uxMenuStrip.Location = new Point(0, 0);
-            uxMenuStrip.Name = "uxMenuStrip";
-            uxMenuStrip.Size = new Size(743, 24);
-            uxMenuStrip.TabIndex = 0;
-            uxMenuStrip.Text = "menuStrip1";
+            uxMenuBar.Items.AddRange(new ToolStripItem[] { uxFile });
+            uxMenuBar.Location = new Point(0, 0);
+            uxMenuBar.Name = "uxMenuBar";
+            uxMenuBar.Size = new Size(800, 24);
+            uxMenuBar.TabIndex = 0;
+            uxMenuBar.Text = "menuStrip1";
             // 
             // uxFile
             // 
@@ -53,58 +53,55 @@
             uxFile.Name = "uxFile";
             uxFile.Size = new Size(37, 20);
             uxFile.Text = "File";
-            uxFile.Click += File_Click;
             // 
             // uxOpen
             // 
             uxOpen.Name = "uxOpen";
-            uxOpen.Size = new Size(112, 22);
-            uxOpen.Text = "Open";
-            uxOpen.Click += Open_Click;
+            uxOpen.Size = new Size(132, 22);
+            uxOpen.Text = "Open . . .";
+            uxOpen.Click += OpenClick;
             // 
             // uxSaveAs
             // 
             uxSaveAs.Name = "uxSaveAs";
-            uxSaveAs.Size = new Size(112, 22);
-            uxSaveAs.Text = "Save as";
-            uxSaveAs.Click += SaveAs_Click;
+            uxSaveAs.Size = new Size(132, 22);
+            uxSaveAs.Text = "Save As . . .";
+            uxSaveAs.Click += SaveAsClick;
             // 
-            // uxTextBox
+            // uxEditBuffer
             // 
-            uxTextBox.Location = new Point(12, 27);
-            uxTextBox.Multiline = true;
-            uxTextBox.Name = "uxTextBox";
-            uxTextBox.Size = new Size(719, 524);
-            uxTextBox.TabIndex = 1;
+            uxEditBuffer.Dock = DockStyle.Fill;
+            uxEditBuffer.Location = new Point(0, 24);
+            uxEditBuffer.Multiline = true;
+            uxEditBuffer.Name = "uxEditBuffer";
+            uxEditBuffer.ScrollBars = ScrollBars.Vertical;
+            uxEditBuffer.Size = new Size(800, 426);
+            uxEditBuffer.TabIndex = 1;
             // 
-            // uxSaveFileDialog
-            // 
-            uxSaveFileDialog.FileOk += SaveFileDialogFileOk;
-            // 
-            // uxUserInterface
+            // UserInterface
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(743, 563);
-            Controls.Add(uxTextBox);
-            Controls.Add(uxMenuStrip);
-            MainMenuStrip = uxMenuStrip;
-            Name = "uxUserInterface";
+            ClientSize = new Size(800, 450);
+            Controls.Add(uxEditBuffer);
+            Controls.Add(uxMenuBar);
+            MainMenuStrip = uxMenuBar;
+            Name = "UserInterface";
             Text = "Text Editor";
-            uxMenuStrip.ResumeLayout(false);
-            uxMenuStrip.PerformLayout();
+            uxMenuBar.ResumeLayout(false);
+            uxMenuBar.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private MenuStrip uxMenuStrip;
+        private MenuStrip uxMenuBar;
         private ToolStripMenuItem uxFile;
         private ToolStripMenuItem uxOpen;
         private ToolStripMenuItem uxSaveAs;
-        private TextBox uxTextBox;
-        private OpenFileDialog uxOpenFileDialog;
-        private SaveFileDialog uxSaveFileDialog;
+        private TextBox uxEditBuffer;
+        private OpenFileDialog uxOpenDialog;
+        private SaveFileDialog uxSaveDialog;
     }
 }
