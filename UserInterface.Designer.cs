@@ -32,6 +32,9 @@
             uxFile = new ToolStripMenuItem();
             uxOpen = new ToolStripMenuItem();
             uxSaveAs = new ToolStripMenuItem();
+            encryptToolStripMenuItem = new ToolStripMenuItem();
+            withStringToolStripMenuItem = new ToolStripMenuItem();
+            withStringBuilderToolStripMenuItem = new ToolStripMenuItem();
             uxEditBuffer = new TextBox();
             uxOpenDialog = new OpenFileDialog();
             uxSaveDialog = new SaveFileDialog();
@@ -40,7 +43,7 @@
             // 
             // uxMenuBar
             // 
-            uxMenuBar.Items.AddRange(new ToolStripItem[] { uxFile });
+            uxMenuBar.Items.AddRange(new ToolStripItem[] { uxFile, encryptToolStripMenuItem });
             uxMenuBar.Location = new Point(0, 0);
             uxMenuBar.Name = "uxMenuBar";
             uxMenuBar.Size = new Size(800, 24);
@@ -67,6 +70,27 @@
             uxSaveAs.Size = new Size(132, 22);
             uxSaveAs.Text = "Save As . . .";
             uxSaveAs.Click += SaveAsClick;
+            // 
+            // encryptToolStripMenuItem
+            // 
+            encryptToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { withStringToolStripMenuItem, withStringBuilderToolStripMenuItem });
+            encryptToolStripMenuItem.Name = "encryptToolStripMenuItem";
+            encryptToolStripMenuItem.Size = new Size(59, 20);
+            encryptToolStripMenuItem.Text = "Encrypt";
+            // 
+            // withStringToolStripMenuItem
+            // 
+            withStringToolStripMenuItem.Name = "withStringToolStripMenuItem";
+            withStringToolStripMenuItem.Size = new Size(180, 22);
+            withStringToolStripMenuItem.Text = "With String";
+            withStringToolStripMenuItem.Click += WithString;
+            // 
+            // withStringBuilderToolStripMenuItem
+            // 
+            withStringBuilderToolStripMenuItem.Name = "withStringBuilderToolStripMenuItem";
+            withStringBuilderToolStripMenuItem.Size = new Size(180, 22);
+            withStringBuilderToolStripMenuItem.Text = "With StringBuilder";
+            withStringBuilderToolStripMenuItem.Click += WithStringBuilder;
             // 
             // uxEditBuffer
             // 
@@ -103,5 +127,8 @@
         private TextBox uxEditBuffer;
         private OpenFileDialog uxOpenDialog;
         private SaveFileDialog uxSaveDialog;
+        private ToolStripMenuItem encryptToolStripMenuItem;
+        private ToolStripMenuItem withStringToolStripMenuItem;
+        private ToolStripMenuItem withStringBuilderToolStripMenuItem;
     }
 }
