@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "WSUPxBIBW+Fm1ru9uX71zoKEl+Pbe/qlZBpvcpk0iUpiaQg2bEha9efwXR6v0VyMZJAcZKL6T7E1ElVp5qJwdQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\pmrottin\\Desktop\\Text editor\\Ksu.Cis300.TextEditor\\Ksu.Cis300.TextEditor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\pmrottin\\.nuget\\packages\\ksu.cs.codeanalyzers\\1.0.3.2\\ksu.cs.codeanalyzers.1.0.3.2.nupkg.sha512"
+  ],
+  "logs": []
+}

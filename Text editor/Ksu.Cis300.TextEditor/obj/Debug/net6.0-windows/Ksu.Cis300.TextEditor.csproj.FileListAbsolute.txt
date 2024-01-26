@@ -1,0 +1,16 @@
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\bin\Debug\net6.0-windows\Ksu.Cis300.TextEditor.exe
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\bin\Debug\net6.0-windows\Ksu.Cis300.TextEditor.deps.json
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\bin\Debug\net6.0-windows\Ksu.Cis300.TextEditor.runtimeconfig.json
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\bin\Debug\net6.0-windows\Ksu.Cis300.TextEditor.dll
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\bin\Debug\net6.0-windows\Ksu.Cis300.TextEditor.pdb
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.UserInterface.resources
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.csproj.GenerateResource.cache
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.AssemblyInfoInputs.cache
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.AssemblyInfo.cs
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.csproj.CoreCompileInputs.cache
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.dll
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\refint\Ksu.Cis300.TextEditor.dll
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.pdb
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\Ksu.Cis300.TextEditor.genruntimeconfig.cache
+C:\Users\pmrottin\Desktop\Text editor\Ksu.Cis300.TextEditor\obj\Debug\net6.0-windows\ref\Ksu.Cis300.TextEditor.dll
